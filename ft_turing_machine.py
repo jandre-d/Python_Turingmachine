@@ -6,7 +6,7 @@
 #    By: jandre-d <jandre-d@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2019/10/20 12:38:25 by jandre-d       #+#    #+#                 #
-#    Updated: 2019/10/20 21:08:59 by jandre-d      ########   odam.nl          #
+#    Updated: 2019/10/21 11:54:24 by jandre-d      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -75,7 +75,7 @@ class _turing_machine():
 		for transition in current_state_transitions:
 			if transition['read'] == read:
 				return transition
-		print('error: transition not specified')
+		print('error: state transition for "{}" is not specified'.format(read))
 		return False
 
 	def execute(self, input):
